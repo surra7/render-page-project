@@ -1,0 +1,14 @@
+.wrap-info2 {
+  position: relative;
+  height: 100vh;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url(../../public/images/subject-12.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}

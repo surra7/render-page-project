@@ -1,0 +1,50 @@
+.wrap-info1 {
+  position: relative;
+  height: 100vh;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url(../../public/images/subject-11.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.info-container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-info {
+}
+
+.content-container {
+  margin-left: 40px;
+}
+.title {
+  font-family: "YeojuCeramic";
+  font-size: 4vmax;
+  font-weight: 400;
+  color: #157d76;
+  margin-bottom: 16px;
+}
+
+.content {
+  font-size: 2vmax;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #333333;
+}

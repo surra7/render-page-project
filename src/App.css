@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+.snow-container {
+  display: flex;
+  justify-content: space-between;
+  height: 0;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.snow-flake {
+  background-image: url(../public/images/subject-3.png);
+  animation: fall 18s linear infinite;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes fall {
+  0% {
+    opacity: 1;
+  }
+  3% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 480vh);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .outer {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #c4e7fa;
+} */
+
+/* 화면에서 스크롤바 안보이게 */
+/* .outer::-webkit-scrollbar {
+  display: none;
+} */
+
+* {
+  font-family: "Wanted Sans Variable";
+  /* user-select: text; */
+}
+
+main {
+  height: 500vh;
+  overflow: hidden;
+  background-color: #c4e7fa;
+}
+
+.inner {
+  height: 100vh;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 12vmax;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+h2 {
+  font-size: 6vmax;
+  font-weight: 800;
+  color: #8e2de2;
+}
+
+section {
+  height: 100vh;
+  min-height: 480px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  overflow: hidden;
 }
