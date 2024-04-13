@@ -28,6 +28,7 @@ const Footer = () => {
     <div className="wrap-footer">
       <div className="wrap-back-footer"></div>
       <div className="footer-container">Footer</div>
+      <div className="footer-info">https://github.com/surra7</div>
     </div>
   );
 };

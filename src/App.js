@@ -7,12 +7,12 @@ import Timeline from "./components/Timeline";
 import Info1 from "./components/Info1";
 import Footer from "./components/Footer";
 import Info2 from "./components/Info2";
+import Map from "./components/Map";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Snowflake = ({ style }) => {
   let imgOption = Math.floor(Math.random() * 2) + 1;
-  console.log(imgOption);
   return (
     <div className="snow-flake" style={style}>
       {imgOption === 1 ? (
@@ -169,21 +169,24 @@ function App() {
     <main>
       <div className="snow-container">{makeSnowFlakes()}</div>
       <div className="inner">
-        <div>
+        <section>
           <MainSlide />
-        </div>
-        <div>
+        </section>
+        <section>
           <Timeline />
-        </div>
-        <div>
+        </section>
+        <section>
           <Info1 />
-        </div>
-        <div>
+        </section>
+        <section>
           <Info2 />
-        </div>
-        <div>
+        </section>
+        <section>
+          <Map />
+        </section>
+        <section>
           <Footer />
-        </div>
+        </section>
       </div>
     </main>
   );

@@ -1,5 +1,4 @@
 .wrap-footer {
-  position: relative;
   height: 100vh;
   width: 100%;
   min-height: 480px;
@@ -33,4 +32,13 @@
   margin: auto;
   z-index: 10;
   overflow: hidden;
+}
+
+.footer-info {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  z-index: 100;
+  color: #333333;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 }

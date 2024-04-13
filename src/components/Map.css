@@ -1,0 +1,49 @@
+.wrap-map {
+  height: 100vh;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url(../../public/images/subject-11.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.map-title {
+  font-family: "YeojuCeramic";
+  font-size: 4vmax;
+  font-weight: 400;
+  color: #fa88aa;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.map-button {
+  font-size: 1.7vmax;
+  font-weight: 600;
+  margin: 28px;
+  border: 1.5px solid white;
+  color: #fa88aa;
+  background-color: white;
+  border-radius: 50px;
+  padding: 1.2vmax 3.2vmax;
+  cursor: pointer;
+}
+
+.map-button:hover {
+  background-color: #fa88aa;
+  border: 1.5px solid #fa88aa;
+  color: white;
+}

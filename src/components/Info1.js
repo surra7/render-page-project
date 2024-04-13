@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Info1 = () => {
   useGSAP(() => {
-    gsap.from(".content-container", {
+    gsap.from("#info1", {
       scrollTrigger: {
-        trigger: ".content-container",
+        trigger: "#info1",
         start: `top bottom`,
         end: "bottom center",
         markers: true,
@@ -19,7 +19,7 @@ const Info1 = () => {
       },
       xPercent: 100,
       opacity: 1,
-      duration: 2,
+      duration: 1,
     });
     ScrollTrigger.refresh();
   }, []);
@@ -33,7 +33,7 @@ const Info1 = () => {
           <img alt="info-img-3" src="images/info-3.png" className="img-info" />
           <img alt="info-img-4" src="images/info-4.png" className="img-info" />
         </div>
-        <div className="content-container">
+        <div className="content-container" id="info1">
           <div className="title">공연 / 이벤트</div>
           <div className="content">
             설렘에 설렘을 더할 환호와 감동! <br />
