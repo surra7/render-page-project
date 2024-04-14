@@ -1,15 +1,12 @@
 import "./App.css";
 import MainSlide from "./components/MainSlide";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import Timeline from "./components/Timeline";
 import Info1 from "./components/Info1";
 import Footer from "./components/Footer";
 import Info2 from "./components/Info2";
 import Map from "./components/Map";
-
-gsap.registerPlugin(ScrollTrigger);
+import Notice from "./components/Notice";
+import FAQ from "./components/FAQ";
 
 const Snowflake = ({ style }) => {
   let imgOption = Math.floor(Math.random() * 2) + 1;
@@ -95,63 +92,7 @@ function App() {
   //   };
   // }, []);
 
-  useGSAP(() => {
-    gsap.to("#h1", {
-      scrollTrigger: {
-        trigger: "#header",
-        start: "top",
-        end: "bottom",
-        scrub: true,
-      },
-      yPercent: 50,
-      scale: 3,
-      opacity: 0,
-    });
-    // Section 1 H2
-    gsap.from("#h2", {
-      scrollTrigger: {
-        trigger: "#h2",
-        // start: `top bottom`,
-        // end: `top 400px`,
-        start: `top bottom`,
-        end: "bottom center",
-        markers: true,
-        // scrub: 1,
-        toggleActions: "play complete none reset",
-      },
-      xPercent: 100,
-      opacity: 1,
-    });
-    // Execution heading
-    gsap.from("#h3", {
-      scrollTrigger: {
-        trigger: "#h3",
-        start: "top bottom+=100px",
-        end: "bottom center",
-        // scrub: true,
-        markers: true,
-        toggleActions: "play complete none reset",
-      },
-      xPercent: 100,
-      opacity: 0.5,
-      duration: 1,
-    });
-    gsap.from("#h4", {
-      scrollTrigger: {
-        trigger: "#h4",
-        start: "top bottom",
-        end: "bottom center",
-        // scrub: true,
-        markers: true,
-        toggleActions: "play complete none reset",
-      },
-      yPercent: 100,
-      opacity: 0.5,
-      duration: 1,
-    });
-
-    ScrollTrigger.refresh();
-  }, []);
+  // Execution heading
 
   return (
     // <div>
@@ -180,6 +121,12 @@ function App() {
         </section>
         <section>
           <Info2 />
+        </section>
+        <section>
+          <FAQ />
+        </section>
+        <section>
+          <Notice />
         </section>
         <section>
           <Map />

@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BiShareAlt } from "react-icons/bi";
 import { BiPurchaseTagAlt } from "react-icons/bi";
-import { IoIosArrowDown } from "react-icons/io";
+import { HiArrowSmallDown } from "react-icons/hi2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +44,8 @@ const MainSlide = () => {
           </button>
         </div>
       </div>
-      <IoIosArrowDown size={32} color="#333333" className="arrow-down" />
+      <HiArrowSmallDown size={34} color="#333333" className="arrow-down" />
+      {/* <IoIosArrowDown size={32} color="#333333" className="arrow-down" /> */}
     </div>
   );
 };

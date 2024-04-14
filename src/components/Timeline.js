@@ -13,13 +13,12 @@ const Timeline = () => {
         trigger: "#timeline",
         start: "top bottom",
         end: "bottom center",
-        // scrub: true,
-        markers: true,
+        // markers: true,
         toggleActions: "play complete none reset",
       },
       yPercent: 100,
-      opacity: 1,
-      duration: 1,
+      opacity: 0,
+      duration: 2,
     });
 
     ScrollTrigger.refresh();

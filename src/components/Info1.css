@@ -3,41 +3,59 @@
   min-height: 480px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
   background-image: url(../../public/images/subject-11.png);
   background-size: contain;
+  background-position: 50%;
   background-repeat: no-repeat;
   z-index: 10;
 }
 
 .info-container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.img-container {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.info1-img-container {
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, auto-fit);
+  grid-template-rows: repeat(auto-fit, auto-fit, auto-fit);
+  gap: 3px;
 }
 
-.img-info {
+.img-info1 {
+  width: 200px;
+  height: 18vmax;
+  max-height: 200px;
+}
+
+.img-info1:nth-child(3) {
+  width: 403px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.img-info1:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 .content-container {
+  display: flex;
+  flex-direction: column;
   margin-left: 40px;
 }
-.title {
+.info1-title {
   font-family: "YeojuCeramic";
   font-size: 4vmax;
   font-weight: 400;
-  color: #157d76;
+  color: #fa88aa;
   margin-bottom: 16px;
 }
 
@@ -46,4 +64,75 @@
   font-weight: 600;
   letter-spacing: -0.01em;
   color: #333333;
+}
+
+.info1-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 16px 0 0 0;
+}
+
+.button-stage {
+  width: 8vmax;
+  height: 8vmax;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-event {
+  width: 8vmax;
+  height: 8vmax;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-text {
+  font-family: "YeojuCeramic";
+  font-size: 1.5vmax;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #333333;
+  z-index: 1000;
+}
+
+.button-back {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8vmax;
+  height: 8vmax;
+  z-index: 100;
+  will-change: transform;
+}
+
+.stage {
+  background-image: url(../../public/images/subject-9.png);
+}
+
+.event {
+  background-image: url(../../public/images/subject-9.png);
+}
+
+.button-back:hover {
+  /* color: white;
+  text-shadow: 1px 1px rgba(3, 3, 3, 0.5), 1px 1px rgba(3, 3, 3, 0.5),
+    1px 1px rgba(3, 3, 3, 0.5); */
+  animation: rotate_button 0.3s ease-in-out forwards;
+}
+
+@keyframes rotate_button {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
 }

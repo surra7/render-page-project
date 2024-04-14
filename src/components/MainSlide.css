@@ -5,6 +5,7 @@
   margin: auto;
   background-image: url(../../public/images/subject-1.png);
   background-size: contain;
+  background-position: 50%;
   background-repeat: no-repeat;
   animation: backgroundUp 1s linear;
   z-index: 10;
@@ -38,7 +39,7 @@
   align-items: center;
   width: 80%;
   height: 90vh;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
   z-index: 10;
   overflow: hidden;
@@ -96,7 +97,7 @@
 
 .arrow-down {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   left: 50%;
   transform: translate(-50%, 0);
   animation: upAndDown 0.8s ease-in-out alternate infinite;

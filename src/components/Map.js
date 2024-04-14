@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Map.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -30,11 +30,11 @@ const Map = () => {
         trigger: "#map",
         start: "top bottom",
         end: "bottom center",
-        markers: true,
+        // markers: true,
         toggleActions: "play complete none reset",
       },
       yPercent: 30,
-      opacity: 1,
+      opacity: 0,
       duration: 1,
     });
     gsap.from("#map-button", {
@@ -46,8 +46,8 @@ const Map = () => {
         toggleActions: "play complete none reset",
       },
       yPercent: 50,
-      opacity: 1,
-      duration: 1,
+      opacity: 0,
+      duration: 1.2,
     });
 
     ScrollTrigger.refresh();

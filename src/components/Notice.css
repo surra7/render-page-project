@@ -1,0 +1,118 @@
+.wrap-notice {
+  height: 100vh;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url(../../public/images/subject-11.png);
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.notice-title {
+  font-family: "YeojuCeramic";
+  font-size: 4vmax;
+  font-weight: 400;
+  color: #fa88aa;
+  margin-bottom: 24px;
+}
+
+.notice-list-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.notice-item {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notice-question {
+  flex: 1;
+  margin: 0 50px;
+  text-align: start;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #333333;
+}
+
+.notice-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s, padding 0.3s;
+  padding: 0;
+  will-change: grid-template-rows, padding;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #333333;
+}
+
+.display {
+  padding: 16px 0 0;
+  grid-template-rows: 1fr;
+}
+
+.notice-answer-text {
+  overflow: hidden;
+}
+
+a:hover {
+  color: #fa88aa;
+}
+
+.last {
+  border: none;
+}
+
+.button-up {
+  animation: rotate_image 0.3s ease-in-out backwards;
+}
+
+.button-down {
+  animation: rotate_image_reverse 0.3s ease-in-out backwards;
+}
+
+@keyframes rotate_image {
+  0% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate_image_reverse {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
