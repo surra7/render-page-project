@@ -23,7 +23,6 @@ const Info1 = () => {
         trigger: "#info1",
         start: `top bottom`,
         end: "bottom bottom+=100px",
-        // markers: true,
         scrub: 1,
         toggleActions: "play complete none reset",
       },

@@ -71,7 +71,7 @@
   font-size: 1.8vmax;
 }
 
-button {
+.button {
   border-radius: 50px;
   padding: 1vmax 3vmax;
   cursor: pointer;

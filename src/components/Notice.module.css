@@ -1,4 +1,4 @@
-.wrap-notice {
+.wrapper {
   height: 100vh;
   min-height: 480px;
   display: flex;
@@ -13,17 +13,18 @@
   z-index: 10;
 }
 
-.notice-container {
+.notice_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   max-width: 1100px;
   margin: auto;
 }
 
-.notice-title {
+.title {
   font-family: "YeojuCeramic";
   font-size: 4vmax;
   font-weight: 400;
@@ -31,7 +32,7 @@
   margin-bottom: 24px;
 }
 
-.notice-list-container {
+.notice_list_container {
   background-color: white;
   border-radius: 8px;
   width: 90%;
@@ -39,7 +40,7 @@
   margin: auto;
 }
 
-.notice-item {
+.notice_item {
   position: relative;
   width: 100%;
   height: fit-content;
@@ -51,7 +52,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-.notice-question {
+.question {
   flex: 1;
   margin: 0 50px;
   text-align: start;
@@ -61,7 +62,7 @@
   color: #333333;
 }
 
-.notice-answer {
+.answer {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s, padding 0.3s;
@@ -77,7 +78,7 @@
   grid-template-rows: 1fr;
 }
 
-.notice-answer-text {
+.answer_text {
   overflow: hidden;
 }
 
@@ -89,11 +90,11 @@ a:hover {
   border: none;
 }
 
-.button-up {
+.button_up {
   animation: rotate_image 0.3s ease-in-out backwards;
 }
 
-.button-down {
+.button_down {
   animation: rotate_image_reverse 0.3s ease-in-out backwards;
 }
 

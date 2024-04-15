@@ -9,7 +9,7 @@ import Notice from "./components/Notice";
 import FAQ from "./components/FAQ";
 import useMoveScroll from "./hooks/useMoveScroll";
 
-const Snowflake = ({ style }) => {
+const FlowerFlake = ({ style }) => {
   let imgOption = Math.floor(Math.random() * 2) + 1;
   return (
     <div className="snow-flake" style={style}>
@@ -22,12 +22,11 @@ const Snowflake = ({ style }) => {
   );
 };
 
-const makeSnowFlakes = () => {
-  let animationDelay = "0s"; // 기본 값은 0초이다.
+const makeFlowerFlakes = () => {
+  let animationDelay = "0s";
   let width = "30px";
   const arr = Array.from("1234567");
 
-  // arr의 length 만큼의 <SnowFlake />를 반환한다.
   return arr.map((el, i) => {
     animationDelay = `${(Math.random() * 24).toFixed(2) + 10}s`;
     width = `${Math.floor(Math.random() * 30) + 50}px`;
@@ -36,7 +35,7 @@ const makeSnowFlakes = () => {
       width,
       transform: `translateY(-50px)`,
     };
-    return <Snowflake key={i} style={style} />;
+    return <FlowerFlake key={i} style={style} />;
   });
 };
 
@@ -48,63 +47,9 @@ function App() {
     length: 3,
   };
 
-  // const outerDivRef = useRef();
-  // const [currentPage, setCurrentPage] = useState(1);
-  // useEffect(() => {
-  //   const wheelHandler = (e) => {
-  //     // e.preventDefault();
-  //     const { deltaY } = e;
-  //     const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
-  //     const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
-
-  //     if (deltaY > 10) {
-  //       // 스크롤 내릴 때
-  //       if (scrollTop >= 0 && scrollTop < pageHeight) {
-  //         //현재 1페이지
-  //         outerDivRef.current.scrollTo({
-  //           top: pageHeight,
-  //           left: 0,
-  //           behavior: "smooth",
-  //         });
-  //         setCurrentPage(2);
-  //       } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-  //         //현재 2페이지
-  //         outerDivRef.current.scrollTo({
-  //           top: pageHeight * 2,
-  //           left: 0,
-  //           behavior: "smooth",
-  //         });
-  //         setCurrentPage(3);
-  //       } else if (scrollTop >= pageHeight * 2 && scrollTop < pageHeight * 3) {
-  //         // 현재 3페이지
-  //         outerDivRef.current.scrollTo({
-  //           top: pageHeight * 3,
-  //           left: 0,
-  //           behavior: "smooth",
-  //         });
-  //         setCurrentPage(4);
-  //       } else {
-  //         // 현재 4페이지
-  //         outerDivRef.current.scrollTo({
-  //           top: pageHeight * 4,
-  //           left: 0,
-  //           behavior: "smooth",
-  //         });
-  //       }
-  //     }
-  //   };
-  //   const outerDivRefCurrent = outerDivRef.current;
-  //   outerDivRefCurrent.addEventListener("wheel", wheelHandler);
-  //   return () => {
-  //     outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
-  //   };
-  // }, []);
-
-  // Execution heading
-
   return (
     <main>
-      <div className="snow-container">{makeSnowFlakes()}</div>
+      <div className="snow-container">{makeFlowerFlakes()}</div>
       <div className="absolute flex justify-end items-end z-[1000] select-auto cursor-pointer w-full right-[12vmax] top-6">
         <div
           onClick={navigationTabs[0].onMoveToElement}

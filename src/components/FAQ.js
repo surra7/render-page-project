@@ -25,7 +25,6 @@ const FAQ = () => {
         trigger: "#faq-list-container",
         start: "top bottom",
         end: "bottom center",
-        // markers: true,
         toggleActions: "play complete none reset",
       },
       yPercent: 30,

@@ -26,17 +26,6 @@
   }
 }
 
-/* .outer {
-  height: 100vh;
-  overflow-y: auto;
-  background-color: #c4e7fa;
-} */
-
-/* 화면에서 스크롤바 안보이게 */
-/* .outer::-webkit-scrollbar {
-  display: none;
-} */
-
 * {
   font-family: "Wanted Sans Variable";
   -webkit-user-select: none;

@@ -47,7 +47,6 @@ const MainSlide = () => {
         </div>
       </div>
       <HiArrowSmallDown size={34} color="#333333" className="arrow-down" />
-      {/* <IoIosArrowDown size={32} color="#333333" className="arrow-down" /> */}
     </div>
   );
 };
