@@ -8,7 +8,7 @@
 }
 .snow-flake {
   background-image: url(../public/images/subject-3.png);
-  animation: fall 18s linear infinite;
+  animation: fall 30s linear infinite;
 }
 @keyframes fall {
   0% {

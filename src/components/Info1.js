@@ -12,19 +12,18 @@ const Info1 = () => {
       scrollTrigger: {
         trigger: "#info1-img-container",
         start: "top bottom",
-        end: "bottom bottom+=100px",
-        markers: true,
+        end: "bottom center",
         toggleActions: "play complete none reset",
       },
       opacity: 0,
-      duration: 1,
+      duration: 1.5,
     });
     gsap.from("#info1", {
       scrollTrigger: {
         trigger: "#info1",
         start: `top bottom`,
-        end: "bottom center",
-        markers: true,
+        end: "bottom bottom+=100px",
+        // markers: true,
         scrub: 1,
         toggleActions: "play complete none reset",
       },

@@ -32,13 +32,15 @@ const MainSlide = () => {
         <img alt="title" src="images/title.png" className="title-img" />
         <div className="button-container">
           <button
-            className="button-purchase"
-            // onClick={() => console.log("clinked")}
+            className="button purchase"
+            onClick={() =>
+              window.open("https://www.everland.com/everland/home/main")
+            }
           >
             구매하기 &nbsp;
             <BiPurchaseTagAlt />
           </button>
-          <button className="button-share">
+          <button className="button share">
             공유하기 &nbsp;
             <BiShareAlt />
           </button>

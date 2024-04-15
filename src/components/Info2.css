@@ -18,7 +18,7 @@
   max-width: 1000px;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .img-info2:nth-child(3) {
-  width: 320px;
+  width: 300px;
   height: 240px;
   grid-column: 2 / 3;
   grid-row: 1 / 5;
@@ -63,13 +63,16 @@
 }
 
 .content-container {
-  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
 }
-.title {
+
+.info2-title {
   font-family: "YeojuCeramic";
   font-size: 4vmax;
   font-weight: 400;
-  color: #157d76;
+  color: #fa88aa;
   margin-bottom: 16px;
 }
 
@@ -78,4 +81,77 @@
   font-weight: 600;
   letter-spacing: -0.01em;
   color: #333333;
+}
+
+.info2-button-container {
+  margin-top: 40px;
+}
+
+.info2-button {
+  position: relative;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 1.2vmax 3vmax;
+  border-radius: 100px;
+  background: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.4vmax;
+  overflow: hidden;
+}
+
+.info2-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #fa88aa;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.info2-button span {
+  color: #333333;
+}
+
+.info2-button:hover > span {
+  color: white;
+}
+
+.path {
+  fill: #333333;
+}
+
+.circle {
+  stroke: #333333;
+}
+
+.info2-button:hover .circle {
+  stroke: white;
+}
+
+.info2-button:hover .path {
+  fill: white;
+}
+
+.info2-button:hover::before {
+  width: 100%;
+}
+
+.info2-button > .svg {
+  width: 3vmax;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.info2-button:hover .svg {
+  transform: translateX(5px);
+}
+
+.info2-button:active {
+  transform: scale(0.95);
 }
